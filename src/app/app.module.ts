@@ -13,6 +13,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { HomeComponent } from './home/home.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     HttpClientModule,
     ModalModule.forRoot(),
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
