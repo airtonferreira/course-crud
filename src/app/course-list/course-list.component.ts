@@ -7,6 +7,7 @@ import { Observable, Subject } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { AlertModalService } from '../shared/alert-modal.service';
 
 @Component({
   selector: 'app-course-list',
@@ -15,7 +16,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class CourseListComponent implements OnInit {
 
-  bsModalRef: BsModalRef;
+  //bsModalRef: BsModalRef;
 
   courses$: Observable<Course[]>; //Melhor maneira de fazer um Observable, para usar pipe async...
   error$ = new Subject<boolean>();
@@ -23,7 +24,7 @@ export class CourseListComponent implements OnInit {
   //É important fazer o unsubscribe para evitar problemas de memória na aplicação. Pipe async evita isso.
 
   constructor(private serviceCourse: CoursesService,
-    private modalService: BsModalService
+    private alertService: AlertModalService
     ) { }
 
   ngOnInit() {
@@ -39,9 +40,10 @@ export class CourseListComponent implements OnInit {
   }
 
   handleError() {
-    this.bsModalRef = this.modalService.show(AlertModalComponent);
-    this.bsModalRef.content.type = 'danger';
-    this.bsModalRef.content.message = 'Erro ao carregar cursos.';
+    this.alertService.showAlertDanger('Erro ao carregar cursos.');
+    //this.bsModalRef = this.modalService.show(AlertModalComponent);
+    //this.bsModalRef.content.type = 'danger';
+    //this.bsModalRef.content.message = 'Erro ao carregar cursos.';
   }
 
 }
