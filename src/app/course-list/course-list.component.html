@@ -20,7 +20,7 @@
                     <td>{{ course.name }}</td>
                     <td>
                         <span class="float-right">
-                            <button class="btn btn-outline-dark mb-1 btn-sm">Editar</button>
+                            <button class="btn btn-outline-dark mb-1 btn-sm" (click)="onEdit(course.id)">Editar</button>
                             &nbsp;
                             <button class="btn btn-outline-danger mb-1 btn-sm">Excluir</button>
                         </span>

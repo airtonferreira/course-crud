@@ -8,6 +8,7 @@ import { catchError } from 'rxjs/operators';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { AlertModalService } from '../shared/alert-modal.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-course-list',
@@ -24,7 +25,9 @@ export class CourseListComponent implements OnInit {
   //É important fazer o unsubscribe para evitar problemas de memória na aplicação. Pipe async evita isso.
 
   constructor(private serviceCourse: CoursesService,
-    private alertService: AlertModalService
+    private alertService: AlertModalService,
+    private router: Router,
+    private route: ActivatedRoute
     ) { }
 
   ngOnInit() {
@@ -44,6 +47,10 @@ export class CourseListComponent implements OnInit {
     //this.bsModalRef = this.modalService.show(AlertModalComponent);
     //this.bsModalRef.content.type = 'danger';
     //this.bsModalRef.content.message = 'Erro ao carregar cursos.';
+  }
+
+  onEdit(id) {
+    this.router.navigate(['edit', id], { relativeTo: this.route })
   }
 
 }
