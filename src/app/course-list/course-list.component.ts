@@ -33,6 +33,7 @@ export class CourseListComponent implements OnInit {
       catchError(error => {
         console.error(error);
         this.handleError();
+        return Observable.throw(error);
       })
     );
   }
