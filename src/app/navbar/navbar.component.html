@@ -3,15 +3,15 @@
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">App</a>
+    <a class="navbar-brand" [routerLink]="['']">CURSOS-CRUD APP</a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >INICIO <span class="sr-only">(Página atual)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cursos</a>
+                <a class="nav-link" [routerLink]="['/courses']" routerLinkActive="router-link-active" >CURSOS</a>
             </li>
         </ul>
         <div class="form-inline my-2 my-lg-0">

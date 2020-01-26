@@ -10,12 +10,16 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { HttpClientModule } from '@angular/common/http'
 
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CourseFormComponent } from './course-form/course-form.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CourseListComponent
+    CourseListComponent,
+    CourseFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
