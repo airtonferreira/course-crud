@@ -2,7 +2,7 @@ import { environment } from './../environments/environment';
 import { Course } from './course';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { tap, delay } from 'rxjs/operators';
+import { tap, delay, take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,10 @@ export class CoursesService {
       delay(2000),
       tap()
     );
+  }
+
+  create(course: string) {
+    return this.http.post(this.API, course).pipe(take(1));
   }
 
   // O tap é uma maneira de debugar. Vc pode usar o console.log dentro, para visualizar o retorno dos dados no console.
