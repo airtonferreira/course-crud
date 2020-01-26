@@ -1,11 +1,12 @@
 <div class="card">
     <div class="card-header d-flex justify-content-between">
         <h3>Cursos</h3>
-        <button class="btn btn-primary" [routerLink]="['/new-course']" routerLinkActive="router-link-active" >Novo Curso</button>
+        <button class="btn btn-primary" [routerLink]="['/new-course']" routerLinkActive="router-link-active">Novo
+            Curso</button>
     </div>
     <div class="card-body">
 
-        <table class="table table-hover" *ngIf="courses$ | async as courses; else loadingError">
+        <table class="table table-hover" *ngIf="courses$ | async as courses; else loading">
             <thead>
                 <tr>
                     <th>#</th>
@@ -28,26 +29,14 @@
             </tbody>
         </table>
 
-        <ng-template #loadingError>
+        <ng-template #loading>
 
-            <div *ngIf="error$ | async; else loading" class="alert alert-danger" role="alert">
-                <h4 class="alert-heading">ERROR!</h4>
-                <p>Sua aplicação não está se comunicando com o servidor por algum motivo.</p>
-                <hr>
-                <p class="mb-0">Tente novamente mais tarde.</p>
+            <div class="loader">
+
+                <span></span>
+                <span></span>
+
             </div>
-
-            <ng-template #loading>
-
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Carregando Cursos...
-                    </div>
-                </div>
-
-            </ng-template>
-
-            
 
         </ng-template>
 
