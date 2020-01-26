@@ -2,11 +2,39 @@
   "cursos": [
     {
       "id": 1,
-      "nome": "Angular"
+      "name": "Angular"
     },
     {
-      "nome": "Java",
+      "name": "Java",
       "id": 2
+    },
+    {
+      "name": "Angular Material",
+      "id": 3
+    },
+    {
+      "name": "Teste",
+      "id": 4
+    },
+    {
+      "name": "aaaaaaaa",
+      "id": 5
+    },
+    {
+      "name": "React",
+      "id": 6
+    },
+    {
+      "name": "React Native",
+      "id": 7
+    },
+    {
+      "name": "Android",
+      "id": 8
+    },
+    {
+      "name": "Ionic",
+      "id": 9
     }
   ]
 }

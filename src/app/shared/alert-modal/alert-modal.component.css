@@ -1,3 +1,7 @@
 .no-margin {
-    margin-bottom: 0px;
+    margin: auto;
+}
+
+button {
+    outline: none!important;
 }
