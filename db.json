@@ -13,12 +13,12 @@
       "id": 3
     },
     {
-      "name": "Teste",
-      "id": 4
+      "id": 4,
+      "name": "Python"
     },
     {
-      "name": "aaaaaaaa",
-      "id": 5
+      "id": 5,
+      "name": "Lua"
     },
     {
       "name": "React",
@@ -42,7 +42,15 @@
     },
     {
       "id": 11,
-      "name": "Airton"
+      "name": "Xamarim"
+    },
+    {
+      "id": 12,
+      "name": "Bootstrap 4"
+    },
+    {
+      "id": 13,
+      "name": "C++"
     }
   ]
 }
