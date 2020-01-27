@@ -22,7 +22,8 @@
                         <span class="float-right">
                             <button class="btn btn-outline-dark mb-1 btn-sm" (click)="onEdit(course.id)">Editar</button>
                             &nbsp;
-                            <button class="btn btn-outline-danger mb-1 btn-sm">Excluir</button>
+                            <button class="btn btn-outline-danger mb-1 btn-sm"
+                                (click)="onDelete(course)">Excluir</button>
                         </span>
                     </td>
                 </tr>
@@ -42,3 +43,11 @@
 
     </div>
 </div>
+
+<ng-template #deleteModal>
+    <div class="modal-body text-center">
+        <p>Tem certeza que deseja excluir este curso?</p>
+        <button type="button" class="btn btn-default" (click)="onConfirmDelete()">Sim</button>
+        <button type="button" class="btn btn-primary" (click)="onDeclineDelete()">Não</button>
+    </div>
+</ng-template>

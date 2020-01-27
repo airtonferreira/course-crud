@@ -43,6 +43,12 @@ export class CoursesService {
     }
   }
 
+  remove(id) {
+    return this.http.delete(`${this.API}/${id}`).pipe(take(1));
+  }
+
   // O tap é uma maneira de debugar. Vc pode usar o console.log dentro, para visualizar o retorno dos dados no console.
+
+  //O take faz o unsubscribe para nós, automaticamente.
 
 }

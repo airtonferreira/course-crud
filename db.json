@@ -1,56 +1,8 @@
 {
   "cursos": [
     {
-      "id": 1,
-      "name": "Angular"
-    },
-    {
       "name": "Java",
       "id": 2
-    },
-    {
-      "name": "Angular Material",
-      "id": 3
-    },
-    {
-      "id": 4,
-      "name": "Python"
-    },
-    {
-      "id": 5,
-      "name": "Lua"
-    },
-    {
-      "name": "React",
-      "id": 6
-    },
-    {
-      "name": "React Native",
-      "id": 7
-    },
-    {
-      "name": "Android",
-      "id": 8
-    },
-    {
-      "name": "Ionic",
-      "id": 9
-    },
-    {
-      "name": "Kotlin",
-      "id": 10
-    },
-    {
-      "id": 11,
-      "name": "Xamarim"
-    },
-    {
-      "id": 12,
-      "name": "Bootstrap 4"
-    },
-    {
-      "id": 13,
-      "name": "C++"
     }
   ]
 }
