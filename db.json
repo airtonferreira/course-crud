@@ -1,8 +1,8 @@
 {
   "cursos": [
     {
-      "name": "Java",
-      "id": 2
+      "id": 3,
+      "name": "JavaScript do Iniciante ao Avançado!"
     }
   ]
 }

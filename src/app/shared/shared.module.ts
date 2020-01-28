@@ -13,6 +13,6 @@ import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
   imports: [
     CommonModule
   ],
-  entryComponents: [AlertModalComponent]
+  entryComponents: [AlertModalComponent, ConfirmModalComponent]
 })
 export class SharedModule { }
